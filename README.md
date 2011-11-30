@@ -1,6 +1,6 @@
-# PLACEHOLDER_IMAGE
+# PLACEHOLDER_IMAGE [![](https://secure.travis-ci.org/merchii/placeholder_image.png)](http://travis-ci.org/merchii/placeholder_image)
 
-...
+*Generate generic placeholder vector images - just like placehold.it, but native.*
 
 ## Usage
 
