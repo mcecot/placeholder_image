@@ -40,6 +40,10 @@ Code:
 * `text_color` - render text using this color. Default: `'#ffffff'`.
 * `text` - the text rendered centered within the image. Default: `'#{WIDTH} x #{HEIGHT}'`.
 
+## Ruby Versions
+
+No JRuby support, because of RMagick-clash.
+
 ## Notes
 
 This gem was developed for our own requirements at **[Merchii](http://github.com/merchii)**, so feel free to send pull-requests with enhancements of any kind (features, bug-fixes, documentation, tests, etc.) to make it better or useful for you as well.
