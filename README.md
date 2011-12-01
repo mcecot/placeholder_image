@@ -38,7 +38,7 @@ Code:
 
 * `background_color` - render background using this color. Default: `'#000000'`.
 * `text_color` - render text using this color. Default: `'#ffffff'`.
-* `text` - the text rendered centered within the image. Default: `'#{WIDTH} x #{HEIGHT}'.
+* `text` - the text rendered centered within the image. Default: `'#{WIDTH} x #{HEIGHT}'`.
 
 ## Notes
 
