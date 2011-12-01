@@ -1,3 +1,42 @@
 #!/usr/bin/env ruby
+require 'rubygems'
+require 'bundler/setup'
+Bundler.setup
+require 'commander/import'
+require 'placeholder_image'
 
-# TODO
+program :name, 'placeholder_image'
+program :version, PlaceholderImage::VERSION
+program :description, 'Generate generic placeholder vector images - just like placehold.it, but native.'
+
+default_command :generate
+
+command :generate do |c|
+  c.syntax = 'placeholder_image generate WIDTHxHEIGHT FILEPATH [options]'
+  c.description = 'Generate placeholder image based on specified options.'
+  c.option '--bgcolor STRING', String, 'Image: background color'
+  c.option '--color STRING', String, 'Image: text color'
+  c.option '--text STRING', String, 'Image: text'
+  c.action do |args, options|
+    image_dimensions = args.shift
+    image_path = args.shift
+    generator_options = {
+      :background_color => options.bgcolor,
+      :text_color => options.color,
+      :text => options.text
+    }
+    begin
+      generator = PlaceholderImage::Generator.new(image_dimensions, generator_options)
+      generator.generate!(image_path)
+      say "=== GENERATED: ==========================="
+      say "Path: #{image_path.inspect}"
+      say "Options:"
+      generator.options.each do |k, v|
+        say "   #{k}: #{v.inspect}"
+      end
+      say "=========================================="
+    rescue => e
+      say "#{e}"
+    end
+  end
+end

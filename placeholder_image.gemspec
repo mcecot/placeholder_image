@@ -17,7 +17,9 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency 'mini_magick'
+  # s.add_runtime_dependency 'mini_magick'
+  s.add_runtime_dependency 'rmagick'
+  s.add_runtime_dependency 'commander'
 
   s.add_development_dependency 'rake'
   s.add_development_dependency 'bundler'
@@ -26,4 +28,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'guard'
   s.add_development_dependency 'guard-bundler'
   s.add_development_dependency 'guard-minitest'
+  # s.add_development_dependency 'chunky_png'
 end

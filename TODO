@@ -1,0 +1,6 @@
+
+== HIGH
+
+- [issue]: Silence RMagick warnings.
+
+- [feature/enhancement]: Implement using MiniMagick - need to learn the API, had some trouble so went RMagick-route.
