@@ -13,17 +13,6 @@ require 'placeholder_image'
 #   - ChunkyPNG: https://github.com/wvanbergen/chunky_png/blob/master/spec/chunky_png/color_spec.rb
 #   - RMagick: http://www.imagemagick.org/RMagick/doc/draw.html
 
-module Kernel
-  # Suppresses warnings within a given block.
-  def with_warnings_suppressed
-    saved_verbosity = $-v
-    $-v = nil
-    yield
-  ensure
-    $-v = saved_verbosity
-  end
-end
-
 module PlaceholderImage
   module SpecHelpers
     module RMagick
