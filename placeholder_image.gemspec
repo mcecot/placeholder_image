@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require 'placeholder_image/version'
 
 Gem::Specification.new do |s|
-  s.name        = "placeholder_image"
+  s.name        = "merchii-placeholder_image"
   s.version     = PlaceholderImage::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Jonas Grimfelt", "Merchii"]
