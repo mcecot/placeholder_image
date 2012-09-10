@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # s.add_runtime_dependency 'mini_magick'
-  s.add_runtime_dependency PLATFORM == 'java' ? 'rmagick4j' : 'rmagick'
+  s.add_runtime_dependency RUBY_PLATFORM == 'java' ? 'rmagick4j' : 'rmagick'
   #'rmagick'
   s.add_runtime_dependency 'commander'
 
